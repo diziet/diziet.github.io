@@ -14,7 +14,6 @@
         }
         #result, #resultUnder18 {
             margin-top: 20px;
-            font-weight: bold;
         }
         input, button {
             padding: 8px;
@@ -551,8 +550,8 @@
             
             // Display result
             resultElement.innerHTML = 
-                `<strong>Your wealth of ${formatCurrency(wealth)} places you at the ${paretoResult.percentile.toFixed(6)}% percentile among ${ageGroup}.</strong><br>` +
-                `Approximately ${formatNumber(paretoResult.richerPeople)} ${ageGroup} are wealthier than you.`;
+                `Your wealth of <strong>${formatCurrency(wealth)}</strong> places you at the <strong>${paretoResult.percentile.toFixed(6)}%</strong> percentile among ${ageGroup}.<br>` +
+                `Approximately <strong>${formatNumber(paretoResult.richerPeople)}</strong> ${ageGroup}  are wealthier than you.`;
             
             // Create percentile table for the appropriate age group
             createPercentileTable(isUnder18);
