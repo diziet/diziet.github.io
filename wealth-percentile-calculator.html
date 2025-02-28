@@ -487,10 +487,10 @@
             let tableHTML = `
                 <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
                     <tr style="background-color: #f2f2f2;">
-                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Percentile</th>
-                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Wealth Threshold</th>
-                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Richer Population</th>
-                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Poorer Population</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Percentile</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: right;">Wealth Threshold</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: right;">Richer Population</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: right;">Poorer Population</th>
                     </tr>`;
             
             // Add rows for percentile bands
@@ -505,10 +505,10 @@
                 
                 tableHTML += `
                     <tr>
-                        <td style="border: 1px solid #ddd; padding: 8px;">${lowerPercentile}% - ${upperPercentile}%</td>
-                        <td style="border: 1px solid #ddd; padding: 8px;">${formatCurrency(wealthThreshold)}</td>
-                        <td style="border: 1px solid #ddd; padding: 8px;">${formatNumber(richerPopulation)}</td>
-                        <td style="border: 1px solid #ddd; padding: 8px;">${formatNumber(poorerPopulation)}</td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: center">${lowerPercentile}% - ${upperPercentile}%</td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: right">${formatCurrency(wealthThreshold)}</td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: right">${formatNumber(richerPopulation)}</td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: right">${formatNumber(poorerPopulation)}</td>
                     </tr>`;
             }
             
